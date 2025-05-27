@@ -1,38 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Moj sajt</title>
-    <style>
-      body {
-        background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
-        color: #333;
-        padding: 20px;
-        max-width: 800px;
-        margin: auto;
-      }
-      h1 {
-        color: #2c3e50;
-      }
-      .card {
-        background: white;
-        padding: 15px;
-        margin-top: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Dobrodošao na moj sajt!</h1>
-    <div class="card">
-      <p>Zovem se Grilijas i napravio sam ovaj sajt pomoću GitHub-a direktno sa telefona!</p>
-    </div>
-    <div class="card">
-      <p>Ovo je tek početak. Uskoro ću ovde dodavati tekstove, slike i još zanimljivih stvari.</p>
-    </div>
-    <div class="card">
-      <p>Prati moj napredak i hvala što si posetio moj sajt, Naravno ovo je samo test pravi sajt ce biti gotov nadam se do avgusta</p>
-    </div>
-  </body>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moj sajt</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c3d);
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+      margin: 15px 0;
+      width: 100%;
+      max-width: 700px;
+      animation: slideUp 1s ease-out;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      margin-top: 25px;
+      max-width: 100%;
+      border-radius: 12px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideUp {
+      from {transform: translateY(30px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dobrodošao na moj sajt!</h1>
+
+  <div class="card">
+    <p>Zovem se Marko i napravio sam ovaj sajt pomoću GitHub-a direktno sa telefona!</p>
+  </div>
+  <div class="card">
+    <p>Ovo je tek početak. Dodavaću još sadržaja, slike, linkove i zanimljive stvari.</p>
+  </div>
+  <div class="card">
+    <p>Prati moj rad i hvala ti što si svratio!</p>
+  </div>
+
+  <!-- Slika dole -->
+  <img src="slika.jpg" alt="Moja slika">
+
+</body>
 </html>
